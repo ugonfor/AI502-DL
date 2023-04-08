@@ -73,5 +73,6 @@ As for the experiments on hyperparameters, my conclusions could be wrong because
 
 4. Experiment Results
 
+<img width="1418" alt="experiment-results" src="https://user-images.githubusercontent.com/56115311/230736659-770023fa-144e-4cdf-9053-497195332fc1.png">
 
 
