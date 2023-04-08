@@ -35,41 +35,41 @@ Comparing the number of parameters, FCNN had the smallest number of parameters o
 
 3. Effects of hyperparameters
 
-hyper parameter로서 optimizer, learning rate, batch size, epoch를 달리해보았다. 전체 실험결과는 section 4, table 1. 에서 확인 가능하다.
+As a hyperparameter, I tried different optimizer, learning rate, batch size, and epoch. Full experiment results can be found in section 4, table 1.
 
 - Optimizer
 
-optimizer의 경우, 대체적으로 Adam을 사용했을 때가 SGD를 사용했을 때보다 best test accuracy에 먼저 도달하는 경향이 존재했다. 
+In the case of the optimizer, there was a tendency to reach the best test accuracy earlier when using Adam than when using SGD.
 
-또한, table 1.에서 파란색으로 표시된 숫자들을 확인해보면 알 수 있듯이, Adam을 사용했을 때, best test accuracy가 더 높은 수치를 달성할 수 있었다.  6개의 architecture에 대해서 4번 Adam이 SGD보다 높은 accuracy를 기록했다.
+Also, as can be seen by checking the numbers marked in blue in table 1., when Adam was used, the best test accuracy was able to achieve higher values. For 6 architectures, Adam scored 4 times higher accuracy than SGD.
 
 - learning rate
 
-optimizer를 SGD로 했을 때만 보면, learning rate를 0.01로 했을 때가 0.001로 했을 때에 비해 훨씬 초반 epoch에 더 높은 accuracy를 기록했다. 반면에 optimizer를 Adam으로 했을 때는 큰 차이가 없거나 역전되었다. 
+Only when SGD was used as the optimizer, when the learning rate was set to 0.01, higher accuracy was recorded at a much earlier epoch than when the learning rate was set to 0.001. On the other hand, when the optimizer was set to Adam, there was no significant difference or it was reversed.
 
-파란색으로 표시된 최종 best test accuracy를 확인해보면, learning rate를 0.001로 한 경우가 6번 중 4번으로 더 많았다. 
+If you check the final best test accuracy, which is displayed in blue, the learning rate was set to 0.001 4 times out of 6 times.
 
 * batch size
 
-batch size의 경우에는 큰 경향성을 찾는 것이 어려웠다.
+In the case of batch size, no particular tendency was found.
 
-파란색으로 표시된 최종 best test accuracy를 확인해보면, batch size를 512로 한 경우가 6번 중 4번으로 더 많았다. 
+Checking the final best test accuracy marked in blue, there were more cases with a batch size of 512, 4 out of 6.
 
 * epoch
 
-epoch의 경우, 당연하게도 크면 클수록 train loss가 줄어들었다. 그렇기에 한번의 경우를 제외하면 모두 100 epoch에서 train loss가 가장 작았다.
+In the case of epoch, of course, the larger the epoch, the smaller the train loss. Therefore, the train loss was the smallest at 100 epochs except for one case.
 
-test accuracy의 경우에도 높은 epoch에서 높은 epoch를 나타내는 경향이 있었다. 그러나 CNN, 1block의 케이스를 확인해보면 20~40에서 가장 높은 accuracy를 달성하는 경우들이 존재하였는데 이는 model의 사이즈가 작아서(model parameter가 작아서) overfitting이 발생한 것으로 추정된다.
+Even in the case of test accuracy, it tended to show high epochs at high epochs. However, when checking the cases of CNN with 1 block, there were cases where the highest accuracy was achieved between epoch 20 and 40, which is presumed to be due to overfitting because of the small size of the model (small model parameters).
 
-epoch은 가장 높은 수치를 달성한 이후에는 낮아지는 경향성을 보였다. 이역시 overfitting으로 인한 것으로 보인다.
+The epoch tended to decrease after achieving the highest value. This also appears to be due to overfitting.
 
 * best combination
 
-파란색으로 표시된 최종 best test accuracy 중 3번이 Adam, 0.001, 512 조합이었다.
+3 of the final best test accuracy, shown in blue, was the Adam, 0.001, 512 combination.
 
 * Discussion
 
-Hyperparameter에 대한 실험은 내가 진행한 것이 그렇게 많은 케이스를 다루고 있는 것이 아니기에, 나의 결론이 틀릴 수도 있다. 결론을 더 탄탄하게 하려면 훨씬 더 많은 실험을 진행해야할 것이다. 
+As for the experiments on hyperparameters, my conclusions could be wrong because I did not deal with so many cases. Much more experimentation will be needed to solidify the conclusions.
 
 4. Experiment Results
 
